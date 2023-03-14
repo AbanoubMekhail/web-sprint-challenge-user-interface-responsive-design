@@ -3,52 +3,141 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
+    color: white;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 * {
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 html {
@@ -62,12 +151,22 @@ body {
     line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, i {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+i {
     text-decoration: none;
 }
 
 h1 {
     font-size: 7.5rem;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
@@ -82,7 +181,8 @@ h4 {
     font-size: 4rem;
 }
 
-p, a {
+p,
+a {
     font-size: 3rem;
 }
 
@@ -96,12 +196,52 @@ header {
     background-repeat: no-repeat;
 }
 
+header nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 26vh;
+    background-color: rgb(0, 4, 17, .8);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.headerImg {
+    height: auto;
+    width: auto;
+
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: space-between;
+    width: 19%;
+}
+
+.fa-brands {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+}
+
+
 /* spacer */
 .spacer {
     width: 100%;
     height: 20vh;
     background-color: rgb(0, 4, 17);
 }
+
 .spacer-sm {
     width: 100%;
     height: 10vh;
@@ -113,12 +253,52 @@ header {
 .menu {
     width: 100%;
     height: auto;
+    display: inline-block;
     background-image: url('../img/staff-bartender.jpg');
     background-color: rgb(0, 4, 17);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
 }
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0% 5%;
+    background-color: rgb(0, 4, 17, .8);
+}
+
+.menu-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-section {
+    width: 30%;
+    text-align: center;
+    margin: 2.5% 10%;
+}
+.menu-section h3 {
+    margin: 5% 0;
+    text-align: left;
+}
+
+.menu-item {
+    margin: 7% 0;
+    text-align: left;
+}
+
+.Item-price {
+    margin: 2% 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 /* footer section */
 footer {
@@ -126,21 +306,125 @@ footer {
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+}
+
+
+footer nav {
+    display: flex;
+}
+
+.Apply {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer .container {
+    width: 70%;
+
+}
+
+
+
+.link {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.CR {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+
+footer p {
+    font-size: 1.5rem;
+}
+
+input {
+    width: 75%;
 }
 
 /* mobile media query */
 @media (max-width: 428px) {
+
     /* header section */
-    .header-title {
-        width: 75%;
-        margin: 0 auto;
+    h1 {
+        font-size: 5rem;
         text-align: center;
-        font-size: 4rem;
+    }
+
+    header nav {
+        width: 100%;
+        top: 0;
+        height: 45vh;
+        background-color: rgb(0, 4, 17, .8);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headerImg {
+        height: auto;
+        width: auto;
+
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fa-brands {
+        flex-direction: row;
+        justify-content: space-evenly;
+        color: white;
     }
 
     /* menu */
     .menu {
         background-image: none;
+        background-color: aliceblue;
+        color: rgb(0, 4, 17);
+    }
+
+    .menu-container {
+        background-color: aliceblue;
+    }
+
+    .menu-title h2 {
+        font-weight: bold;
+        border-bottom: 15px solid black;
+    }
+
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-section {
+        width: 75%;
+        text-align: center;
+    }
+    .menu-section h3 {
+        border: 5px solid black;
+        margin: 5% 5%;
+        text-align: center;
+    }
+
+    .menu-item {
+        text-align: center;
+        border-bottom: 5px solid black;
+    }
+    .Item-price {
+        display: flex;
+        flex-direction: column;
     }
 
     /* footer section */
@@ -149,4 +433,37 @@ footer {
         padding-top: 2.5vh;
         font-size: 2rem;
     }
+
+    footer nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer inpt {
+        flex-direction: column;
+    }
+
+    label {
+        font-size: small;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .CR {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
 }
